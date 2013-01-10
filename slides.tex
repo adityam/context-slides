@@ -43,7 +43,11 @@
 \setupbackgrounds[page][background=color, backgroundcolor=lightgray]
 
 \setupfooter[style=small,color=darkblue]
-\setupfootertexts[][\userpagenumber/\lastuserpage]
+\setupfootertexts[\setups{footer:metadata}][\userpagenumber/\lastuserpage]
+
+\startsetups footer:metadata
+  \getvariable{metadata}{title:marking} (\getvariable{metadata}{author:marking})
+\stopsetups
 
 \definehead
     [slide]

@@ -139,4 +139,14 @@
       number=no,
     ]
 
+\definemeasure[page][\dimexpr\pagegoal-\pagetotal-\lineheight\relax]
+
+\defineexternalfigure
+    [horizontal]
+    [
+      width=\textwidth,
+      height=\measure{page},
+      factor=max,
+    ]
+
 \stopenvironment

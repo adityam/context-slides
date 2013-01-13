@@ -42,7 +42,11 @@
 
 \startreusableMPgraphic {page:background}
   StartPage;
-    fill Page withcolor \MPcolor{lightgray};
+    save p; path p;
+    % p := Page superellipsed 0.98;
+    p := Page cornered (PaperWidth/15);
+    fill Page withcolor darkred;
+    fill p withcolor lightgray;
   StopPage;
 \stopreusableMPgraphic
 

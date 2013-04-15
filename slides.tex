@@ -135,6 +135,25 @@
 \c_strc_itemgroups_spacing_mode\plusone
 \protect
 
+\definedescription
+  [bullet]
+  [
+    alternative=left,
+    width=0.2\textwidth,
+    distance=1em,
+    headstyle=\ssa,
+    headcolor=foreground:contrast,
+    headalign={nothyphenated,flushright},
+    before={\blank[fixed,line]\setups{bullet:setup}},
+    after={\blank[fixed,big]},
+   ]
+
+\startsetups bullet:setup
+  \setupitemize[1][symbol=itemize:nested, width=1.5ex]
+  \setupitemize[1][nowhite,before]
+  \setupitemize[1][before={\vskip -30pt}]
+\stopsetups
+
 \setvariables
     [metadata]
     [

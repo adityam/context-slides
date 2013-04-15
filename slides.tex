@@ -135,6 +135,8 @@
 \c_strc_itemgroups_spacing_mode\plusone
 \protect
 
+\definetabulate[notation][|k0lCT{foreground:altcontrast}|i1p|]
+\setuptabulate [notation][unit=0.5em]
 \definedescription
   [bullet]
   [
@@ -152,6 +154,7 @@
   \setupitemize[1][symbol=itemize:nested, width=1.5ex]
   \setupitemize[1][nowhite,before]
   \setupitemize[1][before={\vskip -30pt}]
+  \setuptabulate[notation][before={\vskip -30pt}]
 \stopsetups
 
 \setvariables

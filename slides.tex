@@ -37,6 +37,8 @@
       footerdistance=0.2\lineheight,
       footer=0.8\lineheight,
       bottomspace=1mm,
+      columns=6,
+      columndistance=0.5em,
     ]
 
 \definecolor[background:light][lightgray]
@@ -59,6 +61,8 @@
 
 \setupbackgrounds[page][background={page:background}]
 
+\definelayer[text]
+\setupbackgrounds[text][background=text]
 \usemodule[visualcounter]
 
 \definevisualcounter
